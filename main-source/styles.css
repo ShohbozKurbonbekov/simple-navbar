@@ -1,0 +1,141 @@
+:root {
+  --nav-text_cl: #324d67;
+  --white-cl: #fff;
+  --icon-cl: #49a6e9;
+}
+/**
+* ! Working on the default values
+**/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: hsl(210, 36%, 96%);
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+
+/**
+* ! Styling Navbar
+**/
+.navbar {
+  background-color: var(--white-cl);
+  padding: 2rem;
+  box-shadow: 5px 15px 20px 0 rgba(0, 0, 0, 0.1);
+}
+.navbar-responsive {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-logo img {
+  height: 40px;
+  vertical-align: middle;
+}
+.nav-items li a {
+  font-size: 1.6rem;
+  color: var(--nav-text_cl);
+  transition: color 0.3s;
+}
+.nav-items li a:hover {
+  color: var(--icon-cl);
+}
+.nav-items {
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.nav-icons {
+  display: none;
+}
+.nav-toggle {
+  font-size: 3.5rem;
+  border: none;
+  background-color: transparent;
+  color: var(--icon-cl);
+  transition: all 0.3s;
+}
+
+.nav-toggle:hover {
+  transform: rotate(90deg);
+  color: #324d67;
+}
+@media screen and (min-width: 801px) {
+  .container {
+    max-width: 110rem;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-responsive {
+    padding: 0;
+  }
+  .nav-toggle {
+    display: none;
+  }
+  .nav-items {
+    display: flex;
+    gap: 3rem;
+    margin: 0;
+    height: auto;
+  }
+  .nav-icons {
+    display: block;
+  }
+  .nav-icons i {
+    font-size: 1.7rem;
+    color: var(--icon-cl);
+    margin-right: 1.2rem;
+    transition: opacity 0.3s;
+  }
+  .nav-icons i:hover {
+    opacity: 60%;
+  }
+}
+.active {
+  margin-top: 2rem;
+  height: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* .active {
+  display: block;
+  opacity: 100%;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2rem;
+  gap: 4rem;
+} */
+
+/* .navbar-responsive {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid red;
+}
+.nav-icons,
+.nav-items {
+  display: none;
+  opacity: 0;
+}
+.nav-toggle {
+  display: block;
+  opacity: 100%;
+} */
